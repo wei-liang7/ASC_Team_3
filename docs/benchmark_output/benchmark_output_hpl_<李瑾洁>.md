@@ -26,6 +26,7 @@ Local Domain Dimensions::ny=16
 Local Domain Dimensions::Lower ipz=0
 Local Domain Dimensions::Upper ipz=0
 Local Domain Dimensions::nz=16
+=====================================================================================================================================================================
 ########## Problem Summary  ##########=
 Setup Information=
 Setup Information::Setup Time=0.00734872
@@ -50,6 +51,7 @@ Multigrid Information::Coarse Grids::Number of Equations=8
 Multigrid Information::Coarse Grids::Number of Nonzero Terms=64
 Multigrid Information::Coarse Grids::Number of Presmoother Steps=1
 Multigrid Information::Coarse Grids::Number of Postsmoother Steps=1
+=====================================================================================================================================================================
 ########## Memory Use Summary  ##########=
 Memory Use Information=
 Memory Use Information::Total memory used for data (Gbytes)=0.00292902
@@ -63,6 +65,7 @@ Memory Use Information::Coarse Grids::Grid Level=2
 Memory Use Information::Coarse Grids::Memory used=3.8968e-05
 Memory Use Information::Coarse Grids::Grid Level=3
 Memory Use Information::Coarse Grids::Memory used=5.312e-06
+=====================================================================================================================================================================
 ########## V&V Testing Summary  ##########=
 Spectral Convergence Tests=
 Spectral Convergence Tests::Result=PASSED
@@ -76,6 +79,7 @@ Departure from Symmetry |x'Ay-y'Ax|/(2*||x||*||A||*||y||)/epsilon=
 Departure from Symmetry |x'Ay-y'Ax|/(2*||x||*||A||*||y||)/epsilon::Result=PASSED
 Departure from Symmetry |x'Ay-y'Ax|/(2*||x||*||A||*||y||)/epsilon::Departure for SpMV=5.24693e-06
 Departure from Symmetry |x'Ay-y'Ax|/(2*||x||*||A||*||y||)/epsilon::Departure for MG=6.55866e-07
+=====================================================================================================================================================================
 ########## Iterations Summary  ##########=
 Iteration Count Information=
 Iteration Count Information::Result=PASSED
@@ -83,11 +87,13 @@ Iteration Count Information::Reference CG iterations per set=50
 Iteration Count Information::Optimized CG iterations per set=50
 Iteration Count Information::Total number of reference iterations=50
 Iteration Count Information::Total number of optimized iterations=50
+=====================================================================================================================================================================
 ########## Reproducibility Summary  ##########=
 Reproducibility Information=
 Reproducibility Information::Result=PASSED
 Reproducibility Information::Scaled residual mean=1.65641e-41
 Reproducibility Information::Scaled residual variance=0
+=====================================================================================================================================================================
 ########## Performance Summary (times in sec) ##########=
 Benchmark Time Summary=
 Benchmark Time Summary::Optimization phase=2.6e-08
@@ -103,11 +109,13 @@ Floating Point Operations Summary::Raw SpMV=9.92827e+06
 Floating Point Operations Summary::Raw MG=5.45048e+07
 Floating Point Operations Summary::Total=6.69071e+07
 Floating Point Operations Summary::Total with convergence overhead=6.69071e+07
+------------------------------------------------------------------------------------------------------------------------------------------
 GB/s Summary=
 GB/s Summary::Raw Read B/W=20.4228
 GB/s Summary::Raw Write B/W=4.72366
 GB/s Summary::Raw Total B/W=25.1465
 GB/s Summary::Total with convergence and optimization phase overhead=24.2661
+------------------------------------------------------------------------------------------------------------------------------------------
 GFLOP/s Summary=
 GFLOP/s Summary::Raw DDOT=6.54251
 GFLOP/s Summary::Raw WAXPBY=6.76662
@@ -116,13 +124,16 @@ GFLOP/s Summary::Raw MG=3.02552
 GFLOP/s Summary::Raw Total=3.30318
 GFLOP/s Summary::Total with convergence overhead=3.30318
 GFLOP/s Summary::Total with convergence and optimization phase overhead=3.18753
+------------------------------------------------------------------------------------------------------------------------------------------
 User Optimization Overheads=
 User Optimization Overheads::Optimization phase time (sec)=2.6e-08
 User Optimization Overheads::Optimization phase time vs reference SpMV+MG time=6.21574e-05
+------------------------------------------------------------------------------------------------------------------------------------------
 DDOT Timing Variations=
 DDOT Timing Variations::Min DDOT MPI_Allreduce time=1.2273e-05
 DDOT Timing Variations::Max DDOT MPI_Allreduce time=1.2273e-05
 DDOT Timing Variations::Avg DDOT MPI_Allreduce time=1.2273e-05
+------------------------------------------------------------------------------------------------------------------------------------------
 Final Summary=
 Final Summary::HPCG result is VALID with a GFLOP/s rating of=3.18753
 Final Summary::HPCG 2.4 rating for historical reasons is=3.30318
