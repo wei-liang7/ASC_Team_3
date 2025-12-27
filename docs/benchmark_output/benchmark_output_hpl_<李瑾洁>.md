@@ -1,4 +1,4 @@
-## 运行命令
+## 单进程运行命令
 
 mpirun -np 1 ./xhpcg --nx=1 --ny=1 --nz=1
 
@@ -134,5 +134,56 @@ Final Summary::Results are valid but execution time (sec) is=0.0202554
 Final Summary::You have selected the QuickPath option=Results are official for legacy installed systems with confirmation from the HPCG Benchmark leaders.
 Final Summary::After confirmation please upload results from the YAML file contents to=http://hpcg-benchmark.org
 ========================================================================================================================================================================================
+
+
+## 多进程运行脚本
+
+```text
+=========================================================================================================================================================================================
+
+echo "=== HPCG 基准测试 ==="
+
+SIZE=176
+TARGET_TIME=120
+THREADS=4
+
+echo "系统内存：~14GB"
+echo "问题规模：${SIZE}*${SIZE}*${SIZE}"
+echo "目标运行时间：${TARGET_TIME}秒"
+echo "OpenMP线程数：${THREADS}"
+
+cat > hpcg.dat << CONFIGEOF
+${SIZE} ${SIZE} ${SIZE}
+${TARGET_TIME}
+1 1 1
+1
+${THREADS}
+1
+1
+1
+1 1 1
+CONFIGEOF
+
+echo -e "\n配置文件内容："
+cat hpcg.dat
+
+echo -e "\n=== 开始运行HPCG基准测试 ==="
+export OMP_NUM_THREADS=$THREADS
+echo "开始时间：${date}"
+
+./bin/xhpcg
+
+echo "结束时间：$(date)"
+
+echo -e "\n=== 测试结果 ==="
+for file in HPCG-*.TXT HPCG-*.yaml; do
+if [ -f "$file" ]; then
+echo "结果文件：$file"
+echo "最后20行内容："
+tail -20 "$file"
+fi
+done
+=========================================================================================================================================================================================
+
 
 
